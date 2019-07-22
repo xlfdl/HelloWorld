@@ -1,6 +1,7 @@
 package SampleTest;
 
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import org.testng.annotations.BeforeTest;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -154,5 +155,19 @@ public class FirstTestCase {
   @AfterTest
   public void afterTest() {
   }
+  
+  @Test
+  public void fff() {
+//	  SoftAssert softAssert=new SoftAssert();
+//	  
+//	  softAssert.assertEquals("hello", "expected");
+	  Assert.assertTrue(1>11, "2 should smaller than 11");
+//	  softAssert.assertAll();
+//	  Assert.fail("error message");  //directly fail the test
+	  
+  }
+	  
+  
+  
 
 }

@@ -1,34 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="2" ignored="0" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="123" started-at="2019-06-26T17:37:02Z" finished-at="2019-06-26T17:37:03Z">
+  <suite name="SampleTestNGSuite" duration-ms="1346" started-at="2019-07-22T22:50:30Z" finished-at="2019-07-22T22:50:31Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="123" started-at="2019-06-26T17:37:02Z" finished-at="2019-06-26T17:37:03Z">
+    <test name="Sample1" duration-ms="63" started-at="2019-07-22T22:50:30Z" finished-at="2019-07-22T22:50:30Z">
       <class name="SampleTest.FirstTestCase">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:SampleTest.FirstTestCase@4f933fd1]" name="beforeTest" is-config="true" duration-ms="17" started-at="2019-06-26T17:37:02Z" finished-at="2019-06-26T17:37:02Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:SampleTest.FirstTestCase@77f03bb1]" name="beforeTest" is-config="true" duration-ms="16" started-at="2019-07-22T22:50:30Z" finished-at="2019-07-22T22:50:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="FAIL" signature="f()[pri:0, instance:SampleTest.FirstTestCase@4f933fd1]" name="f" duration-ms="12" started-at="2019-06-26T17:37:02Z" finished-at="2019-06-26T17:37:02Z">
+        <test-method status="PASS" signature="f()[pri:0, instance:SampleTest.FirstTestCase@77f03bb1]" name="f" duration-ms="0" started-at="2019-07-22T22:50:30Z" finished-at="2019-07-22T22:50:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="FAIL" signature="fff()[pri:0, instance:SampleTest.FirstTestCase@77f03bb1]" name="fff" duration-ms="0" started-at="2019-07-22T22:50:30Z" finished-at="2019-07-22T22:50:30Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [b] but found [a]]]>
+              <![CDATA[2 should smaller than 11 expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [b] but found [a]
+              <![CDATA[java.lang.AssertionError: 2 should smaller than 11 expected [true] but found [false]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at org.testng.Assert.assertEquals(Assert.java:463)
-at SampleTest.FirstTestCase.f(FirstTestCase.java:102)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at SampleTest.FirstTestCase.fff(FirstTestCase.java:164)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
 at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
 at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
@@ -47,20 +48,67 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
 at org.testng.TestNG.runSuites(TestNG.java:1049)
 at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at org.testng.TestNG.privateMain(TestNG.java:1354)
+at org.testng.TestNG.main(TestNG.java:1323)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:SampleTest.FirstTestCase@4f933fd1]" name="afterTest" is-config="true" duration-ms="0" started-at="2019-06-26T17:37:03Z" finished-at="2019-06-26T17:37:03Z">
+        </test-method> <!-- fff -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:SampleTest.FirstTestCase@77f03bb1]" name="afterTest" is-config="true" duration-ms="0" started-at="2019-07-22T22:50:30Z" finished-at="2019-07-22T22:50:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- SampleTest.FirstTestCase -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Sample1 -->
+    <test name="Sample2" duration-ms="0" started-at="2019-07-22T22:50:31Z" finished-at="2019-07-22T22:50:31Z">
+      <class name="SampleTest.SampleFunction">
+        <test-method status="FAIL" signature="StringFunc()[pri:0, instance:SampleTest.SampleFunction@6ad5c04e]" name="StringFunc" duration-ms="0" started-at="2019-07-22T22:50:31Z" finished-at="2019-07-22T22:50:31Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [b] but found [a]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [b] but found [a]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at SampleTest.SampleFunction.StringFunc(SampleFunction.java:48)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.TestNG.privateMain(TestNG.java:1354)
+at org.testng.TestNG.main(TestNG.java:1323)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StringFunc -->
+      </class> <!-- SampleTest.SampleFunction -->
+    </test> <!-- Sample2 -->
+  </suite> <!-- SampleTestNGSuite -->
 </testng-results>
